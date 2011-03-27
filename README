@@ -1,0 +1,22 @@
+This is a simple implementation of the Firebug's Console API (http://getfirebug.com/wiki/index.php/Console_API)
+
+= How to use =
+ 1. import Console;
+ 2. Console.log("hi!");
+ 3. There is no third step
+
+= Methods available =
+For now there is only the basic of the Console API :
+
+ * Console.log
+ * Console.info
+ * Console.warn
+ * Console.error
+ * Console.clear
+
+You can call these methods just like in Firebug or the WebInspector : Console.log(foo) or Console.log(foo, bar) or whatever…
+
+= Limitations =
+Sometimes you want to log things that doesn't make sense for the DOM. The common example is logging an event.
+You'll have a target: [stage Stage] which doesn't make sense. Note that this class will display a string for non-native types or for things that doesn't make sense.
+It will *not* convert these instances to bulk objects. If you want this feature fork it ;).
