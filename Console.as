@@ -32,7 +32,7 @@ package {
 					for (; i < count; i++) {
 						args.push(
 							// Fix the non-native types
-							(nativeTypes.indexOf(typeof arguments[i]) !== -1 || arguments[i] is Array || arguments[i] is Date) ?
+							(nativeTypes.indexOf(typeof arguments[i]) !== -1 || arguments[i] === undefined || arguments[i] === null || arguments[i] is Array || arguments[i] is Date) ?
 							arguments[i] : fix(arguments[i])
 						);
 					}
